@@ -22,17 +22,8 @@ class Menu(Container):
                     content=
                        Row(
                            controls=[
-                               IconButton(icon=icons.ASSIGNMENT_ADD,icon_color='white',on_click= lambda _: self.change_route('/home')),
-                               Text('Abrir nova comanda',color='white')
-                        ]
-                    )
-                ),
-                Container(
-                    content=
-                       Row(
-                           controls=[
-                               IconButton(icon=icons.GRID_VIEW,icon_color='white'),
-                               Text('Visualizar comandas',color='white')
+                               IconButton(icon=icons.HOME,icon_color='white',on_click= lambda _: self.change_route('/home')),
+                               Text('Início',color='white')
                         ]
                     )
                 ),
@@ -67,7 +58,7 @@ class Menu(Container):
                     content=
                        Row(
                            controls=[
-                               IconButton(icon=icons.UPDATE,icon_color='white'),
+                               IconButton(icon=icons.UPDATE,icon_color='white',on_click=lambda _: self.page.update()),
                                Text('Atualizar',color='white')
                         ]
                     )
@@ -76,7 +67,7 @@ class Menu(Container):
                     content=
                        Row(
                            controls=[
-                               IconButton(icon=icons.LOGOUT,icon_color='white'),
+                               IconButton(icon=icons.LOGOUT,icon_color='white',on_click= lambda _: self.page.go('/login')),
                                Text('Sair',color='white')
                         ]
                     )
